@@ -25,6 +25,7 @@ const Label = styled.label`
 export default () => (
   <RegistrationForm>
     <div>
+      <h1>Hi</h1>
       <Label htmlFor="firstName">First Name</Label>
       <Input type="text" id="firstName" placeholder="First Name" />
     </div>

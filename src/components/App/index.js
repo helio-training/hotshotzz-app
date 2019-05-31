@@ -1,13 +1,13 @@
 import React from 'react'
-import { Router } from '@reach/router'
+import { Switch, Route } from 'react-router-dom'
 import HomePage from '../../pages/HomePage'
 import RegisterPage from '../../pages/RegisterPage'
 
 export default () => (
   <>
-    <Router>
-      <HomePage path="/" />
-      <RegisterPage path="/register" />
-    </Router>
+    <Switch>
+      <Route exact path="/" component={HomePage} />
+      <Route exact path="/register" componetn={RegisterPage}/>
+    </Switch>
   </>
 )
