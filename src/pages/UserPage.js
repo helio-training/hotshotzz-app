@@ -1,16 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Leaderboard from '../components/User/Leaderboard'
 import { AUTH_TOKEN } from '../constants'
 
 const authToken = localStorage.getItem(AUTH_TOKEN)
 
 export default (props) => (
-  <>
-    <div>
-      <h1>Homepage</h1>
-      <Link to='/user'>User Page</Link>
-      <br />
-    </div>
+  <div>
+    <h1>User Page</h1>
+    
+    <a href='/'>Home</a>
     <div>
       {authToken ? (
         <div
@@ -20,14 +18,8 @@ export default (props) => (
           }}>
           <button>Logout</button>
         </div>
-      ) : (
-        <Link to="/register">
-          <button>Login</button>
-        </Link>
-      )}
+      ): null}
     </div>
-  </>
+    <Leaderboard />
+  </div>
 )
-
-//TODO:
-// after push register push, update login to logout w/o refresh
