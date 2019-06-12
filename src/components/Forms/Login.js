@@ -62,7 +62,7 @@ class Login extends Component {
         >
           {mutation => (
             <div onClick={mutation}>
-              {login ? <button>login</button> : <button>create account</button>}
+              {login ? <button>Login</button> : <button>Register</button>}
             </div>
           )}
         </Mutation>
@@ -70,8 +70,8 @@ class Login extends Component {
             onClick={() => this.setState({ login: !login })}
           >
             {login
-              ? <button>need to create an account?</button>
-              : <button>already have an account?</button>}
+              ? <button>Create an account?</button>
+              : <button>Already have an account?</button>}
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@ class Login extends Component {
   _confirm = async data => {
     const { token } = this.state.login ? data.login : data.signup
     this._saveUserData(token)
-    this.props.history.push('/user') // tern push to ID of user or admin
+    this.props.history.push('/')
   }
 
   _saveUserData = token => {

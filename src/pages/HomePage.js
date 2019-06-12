@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { withRouter } from 'react-router'
 import { AUTH_TOKEN } from '../constants'
 
 const authToken = localStorage.getItem(AUTH_TOKEN)
@@ -29,3 +28,6 @@ export default (props) => (
     </div>
   </>
 )
+
+//TODO:
+// after push register push, update login to logout w/o refresh
