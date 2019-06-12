@@ -25,8 +25,7 @@ export default () => {
         return (
           <>
             <div>
-              {data.me.name}
-              
+              <p>Current User Data</p>
             </div>
           </>
         )
