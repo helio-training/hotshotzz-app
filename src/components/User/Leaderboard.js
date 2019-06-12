@@ -30,6 +30,7 @@ export default () => {
           <>
             <Current />
             <h1>Leaderboard</h1>
+            <p>rank - username - wins - points - streak? - games played</p>
             <div>
               {usersToRender.map((user, index) => (
                 <User key={user.id} user={user} index={index}/>
