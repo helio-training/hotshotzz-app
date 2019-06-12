@@ -42,6 +42,3 @@ export default () => {
     </Query>
   )
 }
-// TODO:
-// Pagination, Sort By Score, implement a way to add scores
-// make current users info stick to the top.
